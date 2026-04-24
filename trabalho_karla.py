@@ -76,7 +76,7 @@ def entrada_produto(id_produto, quantidade):
     else:
         print("Produto não encontrado!")
 
-def saida_produto(id_produto, quantidade):
+def saida_produto(id_produto, quantidade): 
     cursor.execute("SELECT quantidade FROM produtos WHERE id = ?", (id_produto,))
     resultado = cursor.fetchone()
 
