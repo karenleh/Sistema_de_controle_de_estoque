@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS movimentacoes (
 
 conn.commit()
 
-# FUNÇÕES
+# FUNÇÕES 
 
 def adicionar_produto(nome, quantidade, preco, estoque_min):
     cursor.execute("""
@@ -61,7 +61,7 @@ def registrar_movimentacao(produto_id, tipo, quantidade):
     INSERT INTO movimentacoes (produto_id, tipo, quantidade, data)
     VALUES (?, ?, ?, ?)
     """, (produto_id, tipo, quantidade, data))
-    conn.commit()
+    conn.commit() 
 
 def entrada_produto(id_produto, quantidade):
     cursor.execute("SELECT quantidade FROM produtos WHERE id = ?", (id_produto,))
