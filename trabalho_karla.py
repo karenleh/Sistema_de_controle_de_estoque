@@ -47,7 +47,7 @@ conn.commit()
 
 # FUNÇÕES 
 
-def adicionar_produto(nome, quantidade, preco, estoque_min):
+def adicionar_produto(nome, quantidade, preco, estoque_min): 
     cursor.execute("""
     INSERT INTO produtos (nome, quantidade, preco, estoque_min)
     VALUES (?, ?, ?, ?)
